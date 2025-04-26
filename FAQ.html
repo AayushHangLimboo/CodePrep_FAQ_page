@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodePrep FAQ</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #00ffff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid #00ffff33;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+    h1 {
+      text-align: center;
+      color: #00ffff;
+      text-shadow: 0 0 3px #00ffff;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #00ffff22;
+      padding-bottom: 10px;
+    }
+    .faq-question {
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 5px;
+      color: #00ffff;
+      text-shadow: 0 0 2px #00ffff;
+      padding: 10px;
+      background-color: #0a0a0a;
+      border-radius: 6px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    .faq-question:hover {
+      background-color: #111;
+      transform: scale(1.02);
+    }
+    .faq-answer {
+      display: none;
+      padding: 10px 10px 0 10px;
+      color: #b0eaff;
+    }
+    .faq-question.active {
+      background-color: #111;
+    }
+    .faq-question.active + .faq-answer {
+      display: block;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #00ffff;
+      background-color: #0a0a0a;
+      border-top: 1px solid #00ffff33;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    .footer-link {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    .footer-link:hover {
+      color: #b0eaff;
+      text-shadow: 0 0 5px #00ffff;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+      <div class="faq-question">▶ What is CodePrep Academy?</div>
+      <div class="faq-answer">CodePrep is an online platform offering courses and coaching for technical interview preparation and coding skill enhancement.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">▶ Who can join CodePrep courses?</div>
+      <div class="faq-answer">Anyone interested in improving their programming and interview skills can join—students, job seekers, and professionals.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">▶ What kind of courses are available?</div>
+      <div class="faq-answer">We offer courses in Data Structures, Algorithms, Problem Solving, MERN Stack, and more.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">▶ How can I enroll?</div>
+      <div class="faq-answer">Visit our official website, choose your desired course, and follow the registration process.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">▶ Is there any personalized coaching?</div>
+      <div class="faq-answer">Yes, one-on-one mentorship is available to meet individual learning goals.</div>
+    </div>
+  </div>
+
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+
+    questions.forEach((question) => {
+      question.addEventListener('click', () => {
+        question.classList.toggle('active');
+        if (question.textContent.trim().startsWith('▶')) {
+          question.textContent = question.textContent.replace('▶', '▼');
+        } else {
+          question.textContent = question.textContent.replace('▼', '▶');
+        }
+      });
+    });
+  </script>
+  <footer class="footer">
+    <p>
+      &copy; 2025 CodePrep Academy. All rights reserved. |
+      <a href="https://codeprep.in/#" class="footer-link">Home</a> |
+      <a href="" class="footer-link">About</a> |
+      <a href="" class="footer-link">Contacts</a> |
+    </p>
+  </footer>
+</body>
+</html>
